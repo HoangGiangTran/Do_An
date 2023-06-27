@@ -8,7 +8,6 @@ import giang.dev.data.dao.DatabaseDao;
 import giang.dev.data.model.Product;
 import java.io.IOException;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
@@ -16,7 +15,7 @@ import jakarta.servlet.http.HttpServletResponse;
  *
  * @author Hoang Anh
  */
-public class ProductDetailServlet extends HttpServlet {
+public class ProductDetailServlet extends BaseServlet {
 
    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)

@@ -5,7 +5,6 @@
 package giang.dev;
 
 import giang.dev.data.dao.DatabaseDao;
-import giang.dev.data.dao.DatabaseDao;
 import giang.dev.data.model.Product;
 import java.io.IOException;
 import jakarta.servlet.ServletException;
@@ -13,10 +12,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.util.List;
 
-/**
- *
- * @author KAY
- */
 
 public class ProductServlet extends BaseServlet {
 
@@ -27,7 +22,7 @@ public class ProductServlet extends BaseServlet {
         List<Product> productList = DatabaseDao.getInstance().getProductDao().findAll();
         
         request.setAttribute("productList", productList);
-        request.getRequestDispatcher("products.jsp").include(request, response);
+        request.getRequestDispatcher("product.jsp").include(request, response);
     }
 
     @Override

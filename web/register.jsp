@@ -21,7 +21,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
         <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.0-web/css/all.min.css">
-        <link rel="stylesheet" href="./assets/css/base.css">
+        <link rel="stylesheet" href="./assets/css/main1.css">
         <link rel="stylesheet" href="./assets/css/login.css">
         <link rel="stylesheet" href="./assets/css/register.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -30,71 +30,73 @@
         <!--[if lt IE 9]>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
-        <title>CornSalad Store</title>
+        <title>Biagiotti App</title>
     </head>
 
     <body>
         <!--header-->
-        <div class="header-w3l">
-            <h1>CREATE AN ACCOUNT WITH BIAGIOTTI</h1>
+        <div class="topbanner">
+            <img src="./assets/images/headerbackground1.jpg"
         </div>
-        <!--//header-->
-        <!-- main -->
-        <div class="main-layout">
-            <div class="main-form">
-                <h2>Fill out the form below to Register</h2>
-                <form action="RegisterServlet" method="post">
-                    <div class="form-sub-w3">
-                        <input type="email" name="email" placeholder="email " required="">
-                        <div class="icon-w3">
-
-                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                    <div class="form-sub-w3">
-                        <input type="password" name="password" placeholder="Password" required="">
-                        <div class="icon-w3">
-                            <i class="fa fa-unlock-alt" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                    <div class="form-sub-w3">
-                        <input type="password" name="repeatPass" placeholder="Repeatpassword" required="">
-                        <div class="icon-w3">
-                            <i class="fa fa-unlock-alt" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                    <div class="form-sub-w3">
-                        <div class="form-sub-lable">
-                            <label for="exampleInputEmail1" >Role:</label>
-                            <select name="role" class="form-sub-select">
-                                <option value="User">User </option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="error" >
-                        ${errorMessage}
-                        <c:remove var="errorMessage" scope="session" />
-                    </div>
-                    <label class="anim">
-                        <div class="anim-left">
-                            <input type="checkbox" class="checkbox">
-                            <span class="checkbox-span">I agree all statements in <a href="">Terms of service</a></span>
-                        </div>
-                        <a href="LoginServlet">Login</a>
-                    </label>
-                    <div class="clear"></div>
-                    <div class="submit-agileits">
-                        <input type="submit" value="Register">
-                    </div>
-                </form>
-
+            <div class="header-w3l">
+                <h1>CREATE AN ACCOUNT WITH BIAGIOTTI</h1>
             </div>
-        </div>
-        <!-- fotter -->
-        <div class="footer">
-            <p>&copy; 2023 Biagiotti Register Form. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a>
-            </p>
-        </div>
-    </body>
+            <!--//header-->
+            <!-- main -->
+            <div class="main-layout">
+                <div class="main-form">
+                    <h2>Fill out the form below to Register</h2>
+                    <form action="RegisterServlet" method="post">
+                        <div class="form-sub-w3">
+                            <input type="email" name="email" placeholder="email " required="">
+                            <div class="icon-w3">
 
-</html>
+                                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="form-sub-w3">
+                            <input type="password" name="password" placeholder="Password" required="">
+                            <div class="icon-w3">
+                                <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="form-sub-w3">
+                            <input type="password" name="repeatPass" placeholder="Repeatpassword" required="">
+                            <div class="icon-w3">
+                                <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="form-sub-w3">
+                            <div class="form-sub-lable">
+                                <label for="exampleInputEmail1" >Role:</label>
+                                <select name="role" class="form-sub-select">
+                                    <option value="User">User </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="error" >
+                            ${errorMessage}
+                            <c:remove var="errorMessage" scope="session" />
+                        </div>
+                        <label class="anim">
+                            <div class="anim-left">
+                                <input type="checkbox" class="checkbox">
+                                <span class="checkbox-span">I agree all statements in <a href="">Terms of service</a></span>
+                            </div>
+                            <a href="LoginServlet">Login</a>
+                        </label>
+                        <div class="clear"></div>
+                        <div class="submit-agileits">
+                            <input type="submit" value="Register">
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+            <!-- fotter -->
+            <div class="footer">
+                <p>&copy; 2023 Biagiotti Register Form. All rights reserved</a>
+                </p>
+            </div>
+    </body>
+<%@include file="./inc/footer.jsp" %>

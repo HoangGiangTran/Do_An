@@ -5,6 +5,9 @@
 --%>
 <%@include file="./inc/header.jsp"%>
 <div id=app__container"">
+    <div class="topbanner">
+        <img src="./assets/images/headerbackground1.jpg">
+    </div>
     <div class="top-arrival container">
         <!-- top new arrivals -->
         <div class="row">

@@ -14,7 +14,7 @@
                                     </a>
                                 </div>
                                 <div class="footer-inner">
-                                    <ul class="product-favourite">
+                                    <ul class="product-favourite1">
                                         <li>
                                                 <a href="#" class="text-action" class="text-action"><i class="fa-solid fa-cart-shopping"></i></a>
                                             </li>

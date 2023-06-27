@@ -29,10 +29,10 @@ public class ProductImpl implements ProductDao {
             stmt.setInt(5, product.getCategoryId());
 
             stmt.execute();
-            
+
             ResultSet rs = stmt.getGeneratedKeys();
             int generatedKey = 0;
-            if(rs.next()){
+            if (rs.next()) {
                 generatedKey = rs.getInt(1);
             }
             return generatedKey;
@@ -82,10 +82,10 @@ public class ProductImpl implements ProductDao {
     @Override
     public Product find(int id) {
         // TODO Auto-generated method stub
-        String sql = "SELECT * FROM PRODUCTS";
+        String sql = "SELECT * FROM PRODUCTS where id = ?";
         try {
             PreparedStatement stmt = con.prepareStatement(sql);
-
+            stmt.setInt(1, id);
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
                 String name = rs.getString("name");
@@ -105,7 +105,7 @@ public class ProductImpl implements ProductDao {
         return null;
     }
 
-     @Override
+    @Override
     public List<Product> findAll() {
         // TODO Auto-generated method stub
         List<Product> proList = new ArrayList<>();
@@ -215,7 +215,7 @@ public class ProductImpl implements ProductDao {
         }
         return proList;
     }
-    
+
     @Override
     public List<Product> findByName(String key) {
         List<Product> proList = new ArrayList<>();
@@ -243,7 +243,5 @@ public class ProductImpl implements ProductDao {
         }
         return proList;
     }
-
-   
 
 }

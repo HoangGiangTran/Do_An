@@ -5,12 +5,15 @@
 --%>
 <%@include file="./inc/header.jsp"%>
 <%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
+<div class="topbanner">
+    <img src="./assets/images/headerbackground1.jpg">
+</div>
 <div id="wishlist-container">  
     <!-- PAGE HEADING -->
     <div class="page-heading">
         <div class="container">
             <div class="row">
-                <h1 class="page-title"><i class="page-icon fa-regular fa-heart"></i> Wishlist Cart</h1>
+                <h1 class="page-title">Your Cart</h1>
             </div>
         </div>
     </div>
@@ -71,7 +74,7 @@
                                                 <form action="CartServlet" method="post" class="action-wraper-list">
                                                     <input type="hidden" name="action" value="delete"/>
                                                     <input type="hidden" name="productId" value="${orderItem.productId}"/>
-                                                    <button class="btn-cart" type="submit" value=""><i class="fa-solid fa-trash"></i></button>
+                                                    <button class="btn-cart" type="submit" value="">Delete</button>
                                                 </form>
                                             </div>
                                             <span class="date-add">Added on: April 27, 2023 </span>
@@ -91,8 +94,11 @@
                                 </div>
                                 <div class="form-action-right">
                                     <div class="form-action-right-ask">
-                                        <i class="right-ask-icon fa-solid fa-envelope"></i>
-                                        <span class="right-ask-content">Ask for an estimate</span>
+                                        <span class="right-ask-content"> Total:</span>
+                                        <span class="right-ask-content">
+                                            <fmt:setLocale value = "en_US"/>
+                                            <fmt:formatNumber type="currency" value = "${total}" />
+                                        </span>
                                     </div>
                                     <div class="form-action-right-btn"><a href="CheckoutServlet"
                                                                           class="form-action-right-link">Checkout All</a></div>

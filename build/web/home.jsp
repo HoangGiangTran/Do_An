@@ -35,7 +35,7 @@
         <h1>TOP TRENDING PRODUCTS</h1>
         <h3><span class="section1content">Here are our top trending products</span></h3>
     </div>
-    <div class="section1-product">
+        <div class="section1-product">
         <div class="container">
             <div class="row">
                 <c:forEach items="${productHot}" var="product">
@@ -47,15 +47,10 @@
                                 </a>
                                 <div class="product-favourite">
                                     <div class="text-action">
-                                        <i class="fa-solid fa-heart" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="text-action">
-                                        <i class="fa fa-address-book-o" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="text-action">
-                                        <i class="fa fa-address-book-o" aria-hidden="true"></i>
+                                        <a href="CartServlet?productId=${product.id}"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
+                                
                             </div>
                             <div class="product-footer">
                                 <a href="ProductDetailServlet?productId=${product.id}">
@@ -225,13 +220,7 @@
                                 </a>
                                 <div class="product-favourite">
                                     <div class="text-action">
-                                        <i class="fa fa-address-book-o" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="text-action">
-                                        <i class="fa fa-address-book-o" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="text-action">
-                                        <i class="fa fa-address-book-o" aria-hidden="true"></i>
+                                        <a href="CartServlet?productId=${product.id}"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </div>
